@@ -1,0 +1,8 @@
+project: savantenvs/openenclave
+target: fuzz_tcb_info
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_tcb_info/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_tcb_info
+    libfuzzer: true

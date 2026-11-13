@@ -1,0 +1,8 @@
+project: savantenvs/openenclave
+target: fuzz_attestation_cert
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_attestation_cert/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_attestation_cert
+    libfuzzer: true
